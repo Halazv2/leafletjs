@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <!-- full screen -->
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
+
+    <!-- draw -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+  </head>
+
+  <body>
+    <h1 style="text-align: center; font-size: 3rem; font-weight: 700; margin: 2rem 0; color: #333; text-transform: uppercase">Leaflet</h1>
+
+    <div style="display: flex; justify-content: center; margin: 2rem 0; font-size: 1.5rem; font-weight: 700; color: #333; text-transform: uppercase">
+      <form preventDefault() style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem">
+        <input type="text" name="lat" id="lat" placeholder="lat" />
+        <input type="text" name="lng" id="lng" placeholder="lng" />
+        <button onclick="getLat(event)">get the location</button>
+      </form>
+    </div>
+    <!-- <button onclick="getMyLocation()">Get my location</button> -->
+    <div style="display: flex; justify-content: center">
+      <div id="map" style="width: 800px; height: 500px"></div>
+    </div>
+
+    <script src="./mains.js"></script>
+  </body>
+</html>
