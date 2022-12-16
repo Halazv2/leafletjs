@@ -126,12 +126,17 @@ map.on("draw:created", function (e) {
 L.control.scale().addTo(map);
 
 // ================================================================================================================
-// geocoder
+// navigator
 //   if (L.Browser.gecko) {
 //     alert("Upgrade your browser, dude!");
 //   }
+
+// ================================================================================================================
+// geocoder
 var geocoder = L.Control.geocoder({
   defaultMarkGeocode: false,
+  collapsed: false,
+  position: "bottomright",
 })
   .on("markgeocode", function (e) {
     var bbox = e.geocode.bbox;
